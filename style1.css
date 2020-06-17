@@ -1,0 +1,151 @@
+.body{
+	background-color: lightskyblue;
+	margin: 0px;
+	width: 100%;
+}
+.container2 {
+	background-color: lightskyblue;
+	padding: 0px 0px 0px 0px !important;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.container3 {
+	background-color: lightskyblue;
+	padding: 0px 0px 0px 0px !important;
+	position: absolute;
+	text-align: center;
+}
+.container1 {
+ 	background-color: lightskyblue;
+ 	padding: 0px 0px 0px 0px !important;
+}
+.container4 {
+
+	background-color: lightskyblue;
+	padding: 0px 0px 0px 0px !important;
+	position: absolute;
+}
+.box-1 {
+	font-family: Impact, sans-serif;
+	margin: 0 !important;
+	background-color: darkblue;
+    	height: 100%;
+    	width: 100%;
+    	color: white;
+    	text-align: left;
+    	text-indent: 5%;
+    	padding-top: 1%;
+    	padding-bottom: 1%;
+    	font-size: 350%;
+}
+
+.box-3 {
+	background-color: darkblue;
+    	height: 100%;
+    	width: 100%;
+    	color: white;
+    	padding-top: 0.75%;
+	font-size: 125%;
+	padding-bottom: 5.0%;
+	margin: 0 !important;
+
+}
+.box-main {
+	margin-top: 5.5% !important;
+ 	margin-bottom: 35% !important;
+    
+	background-color: lightskyblue;
+	height: 100%;
+	width: 100%;
+	color: darkblue;
+	font-size: 200%;
+	text-align: center;
+}
+.Susername{
+	margin-top: -40%;
+	background-color: white;
+	color: darkblue;
+	position: absolute;
+	width: 18%;
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+	font-size: 100%;
+	left: 41.5%;
+}
+
+.Susername:hover {
+	color: darkblue;
+	background-color: lightgreen;
+}
+.registeredUser{
+	color: darkblue;
+	background-color: white;
+	border: solid;
+	border-color: darkblue;
+	top: 40px;
+	position: relative;
+	font-size: 200%;
+	
+}
+
+.LoggedUser{
+	color: blue;
+	background-color: white;
+	border: solid;
+	border-color: darkblue;
+	right: 15%;
+	top: 20px;
+	position: absolute;
+	font-size: 140%;
+	padding-right: 0.25%;
+	padding-left: 0.25%;
+}
+.Spassword{
+	left: 41.5%;
+	margin-top: -34%;
+	background-color: white;
+	color: darkblue;
+	position: absolute;
+	width: 18%;
+	font-size: 100%;
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+}
+
+.Spassword:hover {
+color: darkblue;
+background-color: lightgreen;
+}
+.button{
+margin: 0 auto;
+display: block;
+margin-top: -28% !important;
+border-color: darkblue;
+font-size: 100%;
+padding-right: 1.5%;
+padding-left: 1.5%;
+padding-top: 0.25%;
+padding-bottom: 0.25%;
+}
+
+.button:hover {
+color: darkblue;
+background-color: lightgreen;
+}
+.registerbutton{
+margin: 0 auto;
+display: block;
+margin-top: 2% !important;
+border-color: darkblue;
+font-size: 100%;
+padding-right: 1%;
+padding-left: 1%;
+padding-top: 0.25%;
+padding-bottom: 0.25%;
+}
+.registerbutton:hover {
+color: darkblue;
+background-color: lightgreen;
+}
