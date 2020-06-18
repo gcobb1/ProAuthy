@@ -278,7 +278,32 @@ loginApplication::loginApplication(const Wt::WEnvironment& env)
 
 		this->usernamein = this->Wuser.toUTF8();
 		this->passwordin = this->Wpass.toUTF8();
-		this->registerFlag = this->CheckRegisterMap(this->usernamein, this->passwordin);
+		if((this->usernamein.size() == 0) || (usernamein.size() > 20)){
+			registerFlag = 4;
+		}
+		if((this->passwordin.size() == 0) || (passwordin.size() > 20)){
+			registerFlag = 4;
+		}
+		if(this->registerFlag != 4){
+			for(int increment1 = 0; increment1 < usernamein.size(); increment1++){
+				if(usernamein[increment1] == ' '){
+					this->registerFlag = 5;
+					break;
+				}
+			}
+		}
+		if((this->registerFlag != 4) && (this->registerFlag != 5)){
+			for(int increment2 = 0; increment2 < passwordin.size(); increment2++){
+				if(passwordin[increment2] == ' '){
+					this->registerFlag = 5;
+					break;
+				}
+			}
+		}
+
+		if((this->registerFlag != 4) && (this->registerFlag != 5)){
+			this->registerFlag = this->CheckRegisterMap(this->usernamein, this->passwordin);
+		}
 		if(this->registerFlag == 1){
 	//check for username and check for password function	
     			User *newUser = new User(this->Wuser.toUTF8(), this->Wpass.toUTF8());
@@ -287,7 +312,7 @@ loginApplication::loginApplication(const Wt::WEnvironment& env)
 			//this->UsersVec.push_back(*newUser);	
 			this->fullstring = newUser->getName();
 			this->fullstring = this->fullstring + " " + newUser->getPassword();
-			this->myfile.open("users1info.txt", std::ios::app);
+			this->myfile.open("Users1info.txt", std::ios::app);
 			this->myfile << fullstring << "\n";
 			this->myfile.close();
 		//create function that checks if username and password are unused, if so successflag is true
@@ -305,10 +330,16 @@ loginApplication::loginApplication(const Wt::WEnvironment& env)
 			SuccessA->show();
 			this->SuccessA->setText(this->PFail);
 		}
-		else{
+		else if(this->registerFlag == 4){
 			SuccessA->show();
-			this->SuccessA->setText("An Error Has Occured");
+			this->SuccessA->setText("Please fill in both Username and Password");
 		}
+		else if(this->registerFlag == 5){
+			this->SuccessA->setText("Please do not use Spaces");
+		}	
+		else{
+			this->SuccessA->setText("An Error Occurred ");
+		}	
 		this->registerFlag = 0;
 		
 			//}
